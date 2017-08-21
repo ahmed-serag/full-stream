@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Top Movies - FullStream</title>
+	<!-- ****************************************** META DATA *******************************************************-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="robots" content="noindex">
+	<meta name="description" content="Top Movies - FullStream" />
+	<meta name="keywords" content="FullStream, movies, tv shows, itunes affiliate script, php movies script, php movies affiliate script, movie script" />
+	<meta property="og:site_name" content="FullStream" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Top Movies - FullStream" />
+	<meta property="og:description" content="Top Movies - FullStream" />
+	<!-- ********************************************* STYLE *******************************************************-->
+	<link href="../assets/css/dependencies/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/dependencies/bootstrap-material-design.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/dependencies/font.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/dependencies/ripples.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/dependencies/jquery.dropdown.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/new-style.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/star-rating.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+
+<body>
+	<div class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+				<div class="navbar-brand">
+					<a href="#"><img src="../assets/img/logo.png" alt="MovieStore" border="0"></a>
+				</div>
+			</div>
+			<div class="navbar-collapse collapse navbar-responsive-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Home</a></li>
+					<li class="dropdown">
+						<a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Movies <b class="caret"></b></a>
+						<ul class="dropdown-menu" style="min-width: 160px;">
+							<div class="drop-row">
+								<li><a href="#">Top Movies</a></li>
+								<li><a href="#">Top Movie Rentals</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown">TV Shows<b class="caret"></b></a>
+						<ul class="dropdown-menu" style="min-width: 160px;">
+							<div class="drop-row">
+								<li><a href="#">Top TV Seasons</a></li>
+								<li><a href="#">Top TV Episodes</a></li>
+							</div>
+						</ul>
+					</li>
+					<li>
+						<form class="navbar-form">
+							<div class="form-group">
+								<input type="text" placeholder="Search for..." name="q" class="form-control input-sm" value="" />
+								<button type="submit" class="searchbut"><i class="material-icons">search</i></button>
+							</div>
+						</form>
+					</li>
+					<li>
+						<a href="#" data-toggle="modal" data-target="#signInUp"><b>Sign In/ Sign Up</b></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="pagetopbox">
+		<center>
+			<img class="ads top-ads" src="../assets/img/728x90.png"></img>
+		</center>
+	</div>
+	<div class="container">
+		<div class="pagetitle">
+			<h1>Top Movies</h1>
+		</div>
+		<div class="pageresults">
+			<input type="radio" name="viewswitch" class="viewswitch-small" checked="checked" />
+			<span class="control first"><i class="material-icons">apps</i></span>
+			<input type="radio" name="viewswitch" class="viewswitch-medium" />
+			<span class="control"><i class="material-icons">view_module</i></span>
+			<input type="radio" name="viewswitch" class="viewswitch-large" />
+			<span class="control last"><i class="material-icons">menu</i></span>
+			<div class="genre-filter">
+				<li class="dropdown">
+					<a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Filter by Genre <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<div class="drop-row">
+							<li><a href="#">All Genres</a></li>
+							<li><a href="#">Action Adventure</a></li>
+							<li><a href="#">Anime</a></li>
+							<li><a href="#">Classics</a></li>
+							<li><a href="#">Comedy</a></li>
+							<li><a href="#">Documentary</a></li>
+							<li><a href="#">Drama</a></li>
+							<li><a href="#">Foreign</a></li>
+							<li><a href="#">Horror</a></li>
+							<li><a href="#">Independent</a></li>
+							<li><a href="#">Kids Family</a></li>
+							<li><a href="#">Musicals</a></li>
+							<li><a href="#">Romance</a></li>
+							<li><a href="#">Sci-Fi Fantasy</a></li>
+							<li><a href="#">Short Films</a></li>
+							<li><a href="#">Special Interest</a></li>
+							<li><a href="#">Thriller</a></li>
+							<li><a href="#">Sports</a></li>
+							<li><a href="#">Western</a></li>
+						</div>
+					</ul>
+				</li>
+			</div>
+			<ul class="page-itemlist">
+				<li class="page-item">
+					<div class="pagethumb" data-toggle="tooltip" data-placement="top" title="Norman: The Moderate Rise and Tragic Fall of a New York Fixer"><a href="http://moviestore.armorthemes.com/movie/1219583928/norman-the-moderate-rise-and-tragic-fall-of-a-new-york-fixer"><img data-src="https://is4-ssl.mzstatic.com/image/thumb/Video52/v4/10/ab/e3/10abe317-8452-13e1-9e9a-77228e7701e2/NORMAN_THE_MODERATE_RISE_AND_TRAGIC_FALL_OF_A_NEW_YORK_FIXER_2017_TH_MLF-WW-artwork.lsr/250x250bb-85.jpg" src="../assets/img/loading.svg" ></a></div>
+					<div class="info">
+						<h3><a href="http://moviestore.armorthemes.com/movie/1219583928/norman-the-moderate-rise-and-tragic-fall-of-a-new-york-fixer">Norman: The Moderate Rise and Tragic Fall of a New York Fixer</a></h3>
+						<h4>Joseph Cedar</h4>
+						<a class="genre" href="http://moviestore.armorthemes.com/top-movies/4406/drama">Drama</a>
+						<span class="summary">Norman Oppenheimer (Richard Gere) lives a lonely life in the margins of New York City power and money. Norman strives to be everyone’s friend, but his incessant networking leads him nowhere. Norman ends up befriending a young but charismatic politician Micha Eshel (Lior Ashkenazi) at a low point in his life. Three years later, the politician becomes an influential world leader. Flush with his newfound feeling of success, Norman attempts to use Eshel’s name to leverage his biggest deal ever: a series of quid pro quo transactions linking the Prime Minister to Norman’s nephew (Michael Sheen), a rabbi (Steve Buscemi), a mogul (Harris Yulin), his assistant (Dan Stevens), and a treasury official from the Ivory Coast. Norman’s kaleidoscopic plans soon go awry, creating the potential for an international catastrophe he must struggle to prevent. The new film by Academy Award® nominated director Joseph Cedar (Footnote) is a comic and compassionate drama of a little man whose downfall is</span>
+					</div>
+				</li>
+				<li class="page-item">
+					<div class="pagethumb" data-toggle="tooltip" data-placement="top" title="The Deer Hunter"><a href="http://moviestore.armorthemes.com/movie/1174102590/the-deer-hunter"><img data-src="https://is3-ssl.mzstatic.com/image/thumb/Video51/v4/1d/ff/20/1dff2080-9d93-7e5c-2d65-b917aec7739e/U5191_MLNA_DeerHunter_2000x3000.jpg/250x250bb-85.jpg" src="../assets/img/loading.svg" ></a></div>
+					<div class="info">
+						<h3><a href="http://moviestore.armorthemes.com/movie/1174102590/the-deer-hunter">The Deer Hunter</a></h3>
+						<h4>Michael Cimino</h4>
+						<a class="genre" href="http://moviestore.armorthemes.com/top-movies/4406/drama">Drama</a>
+						<span class="summary">Winner of five Academy Awards®, including Best Picture and Best Director, and one of AFI's Top 100 Films of All Time, The Deer Hunter follows a group of Pennsylvania steelworkers from their blue-collar lives, hunting in the woods of the Alleghenies, to the hells of Southeast Asia during the Vietnam War. Academy Award® winners Robert De Niro and Christopher Walken star in this unforgettable saga of friendship and courage. Experience the brutality of war and the depths of emotional strain on the human spirit in this extraordinarily powerful film classic.</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="pagebottombox">
+		<center>
+			<img class="ads top-ads" src="../assets/img/728x90.png"></img>
+		</center>
+	</div>
+	<p id="back-top"><a href="#top"><i class="material-icons">keyboard_arrow_up</i></a></p>
+	<footer>
+		<div class="footcontent">
+			<div class="pull-left">
+				Copyright &copy; 2017 <span>FullStream</span>.
+			</div>
+			<div class="pull-right">
+				<a href="#">Home</a><span class="footsep"></span>
+				<a href="#">Privacy Policy</a><span class="footsep"></span>
+				<a href="https://www.facebook.com/FullStreamnu/">Facebook</a><span class="footsep"></span>
+				<a href="#">Contact</a>
+			</div>
+			<br />
+			<div class="pull-left">
+				<br />
+				<p style="font-size: 10px;margin:5px  0px  5px  0px;">
+					Le Meilleur Site Pour Regarder Gratuitement un maximum de film et Serie en streaming Complet sur Full-Stream (Fak Extension .fr .cc .in .tv...)
+				</p>
+			</div>
+		</div>
+	</footer>
+	<div  id="signInUp" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">Sign In</h4>
+				</div>
+				<div class="modal-body">
+					<form class="col-md-10 col-md-offset-1" action="javascript:alert('login')">
+						<div class="form-group">
+							<label for="email" class="col-md-2 control-label"><i class="material-icons">email</i></label>
+							<div class="col-md-10">
+								<input type="email" class="form-control" id="email" placeholder="Email" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="password" class="col-md-2 control-label"><i class="material-icons">vpn_key</i></label>
+							<div class="col-md-10">
+								<input type="password" class="form-control" id="email" placeholder="Password" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-10 col-md-offset-2">
+								<a href=#>Forget Password?</a>
+							</div>
+						</div>
+						<br/>
+						<div class="form-group">
+							<div class="col-md-10 col-md-offset-2">
+								<button type="submit" class="btn btn-raised btn-block btn-warning">Sign In</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ******************************************* SCRIPTS *****************************************************-->
+	<script src = "../assets/js/jquery.min.js"></script>
+	<script src = "../assets/js/bootstrap.min.js"></script>
+	<script src = "../assets/js/ripples.min.js"></script>
+	<script src = "../assets/js/material.min.js"></script>
+	<script src = "../assets/js/jquery.dropdown.js"></script>
+	<script src = "../assets/js/bigstar-rating.js"></script>
+	<script src = "../assets/js/star-rating.js"></script>
+	<script src = "../assets/js/imglazyload.js"></script>
+	<script src = "../assets/js/app.js"></script>
+</body>
+</html>

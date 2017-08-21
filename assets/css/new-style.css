@@ -1,0 +1,19 @@
+.player-icon {
+  cursor: pointer;
+  float: left;
+  margin-right: 10px;
+}
+.clickable {
+  cursor: pointer;
+}
+.ads-container {
+  margin:0px 0px 20px 0px;
+  padding:0px;
+}
+.ads {
+  width:100%;
+  height:auto;
+}
+.top-ads {
+  width: 60% !important;
+}
