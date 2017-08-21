@@ -1,0 +1,8 @@
+.player-icon {
+  cursor: pointer;
+  float: left;
+  margin-right: 10px;
+}
+.clickable {
+  cursor: pointer;
+}
