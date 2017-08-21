@@ -18,4 +18,4 @@
 - ~~add a button for each player to report if it's not running~~
 
 ## required edits on series page
-- Same as movie page + making each row of "Episodes" table clickable (it'd be great that on click on that row it calls a js function that makes an http req to get the episode data and represent it in the page but that's not required you don't have to build it, it's up to you)
+- ~~Same as movie page + making each row of "Episodes" table clickable (it'd be great that on click on that row it calls a js function that makes an http req to get the episode data and represent it in the page but that's not required you don't have to build it, it's up to you)~~
