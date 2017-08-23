@@ -24,20 +24,20 @@
 - category (name, metatitle, description, parent category-dropdown-) (add/edit/delete)
 
 - movies players (add/edit/delete):
-  -- imdb link
-  -- title
-  -- year
-  -- categories
-  -- directors
-  -- casting
-  -- synopsis (text area)
-  -- poster link
-  -- cover link
-  -- tags
-  -- keywords
-  -- fixed (checkbox)
-  -- quality
-  -- rating
+  - imdb link
+  - title
+  - year
+  - categories
+  - directors
+  - casting
+  - synopsis (text area)
+  - poster link
+  - cover link
+  - tags
+  - keywords
+  - fixed (checkbox)
+  - quality
+  - rating
  
 - movie links (add/edit/delete):
     -- movie title (momkn input w bynzl mno dropdown da msh 3arf asmo)
