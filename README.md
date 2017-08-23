@@ -40,15 +40,15 @@
   - rating
  
 - movie links (add/edit/delete):
-    -- movie title (momkn input w bynzl mno dropdown da msh 3arf asmo)
-    -- player(same as movie title)
-    -- link
-    -- type(radio-VOSTFR or VF or VO)
+    - movie title (momkn input w bynzl mno dropdown da msh 3arf asmo)
+    - player(same as movie title)
+    - link
+    - type(radio-VOSTFR or VF or VO)
 - page for movies reports(delete/ mark as solved) for each report:
-    -- report_id
-    -- movie title
-    -- player
-    -- link
+    - report_id
+    - movie title
+    - player
+    - link
  
  
   
