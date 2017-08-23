@@ -24,21 +24,25 @@
 - category (name, metatitle, description, parent category-dropdown-) (add/edit/delete)
 
 - movies players (add/edit/delete):
-  - imdb link
-  - title
-  - year
-  - categories
-  - directors
-  - casting
-  - synopsis (text area)
-  - poster link
-  - cover link
-  - tags
-  - keywords
-  - fixed (checkbox)
-  - quality
-  - rating
- 
+    - player name
+    - player link
+    - player logo
+- movies (add/edit/delete):
+    - imdb link
+    - title
+    - year
+    - categories
+    - directors
+    - casting
+    - synopsis (text area)
+    - poster link
+    - cover link
+    - tags
+    - keywords
+    - fixed (checkbox)
+    - quality
+    - rating
+
 - movie links (add/edit/delete):
     - movie title (momkn input w bynzl mno dropdown da msh 3arf asmo)
     - player(same as movie title)
@@ -49,8 +53,33 @@
     - movie title
     - player
     - link
- 
- 
+- series player(same for movies)
+- series(add/edit/delete) :
+    - imdb link
+    - title
+    - year
+    - categories
+    - directors
+    - casting
+    - synopsis (text area)
+    - poster link
+    - cover link
+    - tags
+    - keywords
+    - fixed (checkbox)
+    - status
+    - chain
+    - version
+ - series episode (add/edit/delete)
+    - series
+    - number
+ - episode links (add/edit/delete)
+    - player
+    - link
+    - type (radio-VOSTFR or VF or VO)
+
+
+
   
     
     
