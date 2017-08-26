@@ -1648,10 +1648,10 @@ output {
 .form-control,
 .form-group .form-control {
   border: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#C3020C), to(#C3020C)), -webkit-gradient(linear, left top, left bottom, from(#C3020C), to(#C3020C));
-  background-image: -webkit-linear-gradient(#C3020C, #C3020C), -webkit-linear-gradient(#C3020C, #C3020C);
-  background-image: -o-linear-gradient(#C3020C, #C3020C), -o-linear-gradient(#C3020C, #C3020C);
-  background-image: linear-gradient(#C3020C, #C3020C), linear-gradient(#C3020C, #C3020C);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#007177), to(#007177)), -webkit-gradient(linear, left top, left bottom, from(#007177), to(#007177));
+  background-image: -webkit-linear-gradient(#007177, #007177), -webkit-linear-gradient(#007177, #007177);
+  background-image: -o-linear-gradient(#007177, #007177), -o-linear-gradient(#007177, #007177);
+  background-image: linear-gradient(#007177, #007177), linear-gradient(#007177, #007177);
   -webkit-background-size: 0 1px, 100% 1px;
           background-size: 0 1px, 100% 1px;
   background-repeat: no-repeat;
@@ -1720,10 +1720,10 @@ fieldset[disabled] .form-group .form-control {
 }
 .form-group.is-focused .form-control {
   outline: none;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff)), -webkit-gradient(linear, left top, left bottom, from(#C3020C), to(#C3020C));
-  background-image: -webkit-linear-gradient(#ffffff, #ffffff), -webkit-linear-gradient(#C3020C, #C3020C);
-  background-image: -o-linear-gradient(#ffffff, #ffffff), -o-linear-gradient(#C3020C, #C3020C);
-  background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(#C3020C, #C3020C);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff)), -webkit-gradient(linear, left top, left bottom, from(#007177), to(#007177));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff), -webkit-linear-gradient(#007177, #007177);
+  background-image: -o-linear-gradient(#ffffff, #ffffff), -o-linear-gradient(#007177, #007177);
+  background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(#007177, #007177);
   -webkit-background-size: 100% 1px, 100% 1px;
           background-size: 100% 1px, 100% 1px;
   -webkit-box-shadow: none;
@@ -1733,11 +1733,11 @@ fieldset[disabled] .form-group .form-control {
           transition-duration: 0.3s;
 }
 .form-group.is-focused .form-control .material-input:after {
-  background-color: #E50914;
+  background-color: #007177;
 }
 .form-group.is-focused label,
 .form-group.is-focused label.control-label {
-  color: #E50914;
+  color: #007177;
 }
 .form-group.is-focused.label-placeholder label,
 .form-group.is-focused.label-placeholder label.control-label {
@@ -2298,7 +2298,7 @@ legend {
   .navbar .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar .navbar-nav .open .dropdown-menu > li > a:focus {
     color: inherit;
-    background-color:#C3020C;
+    background-color:#007177;
   }
   .navbar .navbar-nav .open .dropdown-menu > .drop-row > .active > a,
   .navbar .navbar-nav .open .dropdown-menu > .drop-row > .active > a:hover,
@@ -2397,7 +2397,7 @@ box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 .navbar .dropdown-menu li > a:focus,
 .navbar.navbar-default .dropdown-menu li > a:focus {
   color: #039BE5;
- 
+
 }
 .navbar .dropdown-menu .active > a,
 .navbar.navbar-default .dropdown-menu .active > a {
@@ -2821,7 +2821,7 @@ box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 .tooltip .arrow,
 .popover .tooltip-arrow,
 .tooltip .tooltip-arrow {
- 
+
 }
 .card {
   /***** Make height equal to width (http://stackoverflow.com/a/6615994) ****/
