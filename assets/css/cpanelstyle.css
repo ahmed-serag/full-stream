@@ -1,0 +1,64 @@
+.no-padding {
+  padding: 0px !important;
+}
+.bold {
+  font-weight: bold !important;
+}
+.light {
+  font-weight: lighter !important;
+}
+header .logo {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+header .page-title {
+  font-size: 30px;
+  line-height: 0px !important;
+}
+@media only screen and (max-width: 550px) {
+  header .page-title {
+    font-size: 20px;
+  }
+}
+header .top-nav {
+  height: 100px !important;
+  background-color: #221F1F !important;
+}
+header .nav-wrapper {
+  padding-top: 50px !important;
+  padding-bottom: 10px !important;
+}
+header .main-menu {
+  border-radius: 0% !important;
+  min-height: 0rem !important;
+  text-align: left !important;
+  padding-left: 16px !important;
+}
+footer {
+  background:#221F1F;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  font-size: 12px;
+  color: #dddddd;
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
+  clear:both;
+  position: fixed;
+  bottom: 0px;
+  margin-bottom: 0px !important;
+}
+footer span {
+  color: #009CA3;
+}
+footer .footer-copyright {
+  float: right;
+}
+main .add-form {
+  margin-bottom: 0px;
+  padding-top: 15px;
+}
+.modal {
+    max-height: 85vh;
+}

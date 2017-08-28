@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Full Stream - CPanel: Categories</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Le Meilleur Site Pour Regarder Gratuitement un maximum de film et Serie en streaming Complet sur Full-Stream (Fak Extension .fr .cc .in .tv...)"/>
+
+  <link rel="stylesheet" href="../assets/css/dependencies/materialize.css" />
+  <link rel="stylesheet" href="../assets/css/dependencies/font.css" />
+  <link rel="stylesheet" href="../assets/css/cpanelstyle.css" />
+
+  <script type="text/javascript" src="../assets/js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/materialize.js"></script>
+
+  <link rel="icon" type="image/ico" href="../assets/img/icon.png">
+</head>
+<body>
+  <header>
+    <div class="row">
+        <nav class="col l9 offset-l3 m12 s12 top-nav">
+            <div class="nav-wrapper">
+              <a class="page-title">CATEGORIES</a>
+              <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+        <ul class="col l3 side-nav fixed" id="nav-mobile">
+      <li class="logo">
+          <img class="brand-logo" src="../assets/img/icon.png" alt="full-stream"/>
+      </li>
+      <li class="active">
+        <a href="./categories.html" class="bold main-menu waves-effect waves-teal">Categories</a>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <a href="#" class="bold main-menu collapsible-header waves-effect waves-teal">Movies</a>
+            <div class="no-padding collapsible-body">
+              <ul>
+                <li>
+                  <a href="./movies.html">Movie</a>
+                </li>
+                <li>
+                  <a href="./movie-players.html">Movie Players</a>
+                </li>
+                <li>
+                  <a href="./movie-links.html">Movie Links</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="bold main-menu collapsible-header waves-effect waves-teal">Series</a>
+            <div class="no-padding collapsible-body ">
+              <ul>
+                <li>
+                  <a href="./series.html">Serie</a>
+                </li>
+                <li>
+                  <a href="./serie-players.html">Serie Players</a>
+                </li>
+                <li>
+                  <a href="./serie-links.html">Serie Links</a>
+                </li>
+                <li>
+                  <a href="./serie-episode.html">Serie episode</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="./reports.html" class="bold main-menu waves-effect waves-teal">Reported</a>
+      </li>
+    </ul>
+    </div>
+  </header>
+  <main class="row">
+    <div class="col l9 offset-l3 m12 s12">
+      <ul class="collapsible popout" data-collapsible="accordion">
+       <li>
+         <div class="collapsible-header"><i class="material-icons">add</i>Add New Category</div>
+         <div class="collapsible-body no-padding">
+           <div class="row add-form">
+             <form class="col m10 offset-m1 s12" id="addForm"
+             action="javascript:alert('add category');reset(document.getElementById('addForm'));">
+               <div class="row">
+                 <div class="input-field col m6 s12">
+                   <input id="category-name" type="text" class="validate" required>
+                   <label for="category-name">Name</label>
+                 </div>
+                 <div class="input-field col m6 s12">
+                   <input id="category-title" type="text" class="validate" required>
+                   <label for="category-title">Metatitle</label>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="input-field col m12 s12">
+                   <select>
+                     <option value="" disabled selected>Choose Parent Category</option>
+                     <option value="1">Option 1</option>
+                     <option value="2">Option 2</option>
+                     <option value="3">Option 3</option>
+                   </select>
+                   <label>Parent Category</label>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="input-field col m12 s12">
+                   <textarea id="category-description" class="materialize-textarea" required></textarea>
+                   <label for="category-description">Description</label>
+                 </div>
+               </div>
+               <div class="row">
+                <div class="col m3 offset-m9 s10 offset-s1">
+                  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
+               </div>
+             </form>
+           </div>
+         </div>
+       </li>
+       <li>
+         <div class="collapsible-header active"><i class="material-icons">mode_edit</i>Edit Categories</div>
+         <div class="collapsible-body">
+          <table class="responsive-table highlight centered">
+            <thead>
+               <tr>
+                 <th>Category Name</th>
+                 <th>Parent category</th>
+                 <th>Meta Title</th>
+                 <th></th>
+               </tr>
+            </thead>
+            <tbody>
+              <tr>
+                 <td>categoryname1</td>
+                 <td>categoryparent</td>
+                 <td>metatitle</td>
+                 <td>
+                   <a class="btn-floating waves-effect waves-light" href="#edit-modal" onclick="getRowData($(this).closest('td').parent()[0])"><i class="material-icons">mode_edit</i>
+                   </a>
+                   <a class="btn-floating waves-effect waves-light"
+                     onclick="javascript:alert('Delete row # : ' + $(this).closest('td').parent()[0].sectionRowIndex)">
+                     <i class="material-icons">delete</i>
+                   </a>
+                 </td>
+              </tr>
+              <tr>
+                <td>categoryname2</td>
+                <td>categoryparent</td>
+                <td>metatitle</td>
+                <td>
+                  <a class="btn-floating waves-effect waves-light" href="#edit-modal" onclick="getRowData($(this).closest('td').parent()[0])" ><i class="material-icons">mode_edit</i>
+                  </a>
+                  <a class="btn-floating waves-effect waves-light"
+                    onclick="javascript:alert('Delete row # : ' + $(this).closest('td').parent()[0].sectionRowIndex)">
+                    <i class="material-icons">delete</i>
+                  </a>
+                </td>
+              </tr>
+             </tbody>
+          </table>
+         </div>
+       </li>
+      </ul>
+    </div>
+  </main>
+  <footer class="row">
+    <div class="col l9 offset-l3 m12 s12">
+      <div class="footer-copyright">
+        Copyright &copy; 2017 <span>FullStream</span>
+       </div>
+   </div>
+  </footer>
+  <div id="edit-modal" class="modal">
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></a>
+    </div>
+    <div class="modal-content">
+      <h5>Edit category</h5>
+      <form class="col m10 offset-m1 s12" id="editForm"
+      action="javascript:alert('edit category');reset(document.getElementById('editForm'));">
+        <div class="row">
+          <div class="input-field col m6 s12">
+            <input id="categoryName" type="text" class="validate" disabled="true">
+          </div>
+          <div class="input-field col m6 s12">
+            <input id="categoryTitle" type="text" class="validate">
+            <label for="categoryTitle">Metatitle</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col m12 s12">
+            <select>
+              <option value="" disabled selected>Choose Parent Category</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <label>Parent Category</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col m12 s12">
+            <textarea id="categoryDescription" class="materialize-textarea"></textarea>
+            <label for="category-description">Description</label>
+          </div>
+        </div>
+        <div class="row">
+         <div class="col m3 offset-m9 s10 offset-s1">
+           <button class="btn waves-effect waves-light modal-close" type="submit" name="action">Submit
+             <i class="material-icons right">send</i>
+           </button>
+         </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $('.button-collapse').sideNav();
+      $('.collapsible').collapsible();
+      $('.modal').modal();
+      $('select').material_select();
+     });
+     function getRowData(element)
+     {
+        $(categoryName).attr("placeholder", element.cells[0].innerHTML);
+     }
+     function reset(element) {
+       element.reset();
+       Materialize.updateTextFields();
+     }
+  </script>
+</body>
+</html>
