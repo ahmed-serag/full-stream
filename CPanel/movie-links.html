@@ -13,6 +13,7 @@
 
   <script type="text/javascript" src="../assets/js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="../assets/js/materialize.js"></script>
+  <script src="../assets/js/jquery.scrollTableBody-1.0.0.js"></script>
 
   <link rel="icon" type="image/ico" href="../assets/img/icon.png">
 </head>
@@ -123,6 +124,14 @@
        <li>
          <div class="collapsible-header active"><i class="material-icons">mode_edit</i>Edit Links</div>
          <div class="collapsible-body">
+           <div class="nav-wrapper card">
+               <div class="input-field">
+                 <input id="search" type="search">
+                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+               </div>
+           </div>
+
+          <div class="scrollable">
           <table class="responsive-table highlight centered">
             <thead>
                <tr>
@@ -162,8 +171,24 @@
                    </a>
                  </td>
               </tr>
-             </tbody>
+
+              <tr>
+                 <td>title1</td>
+                 <td>player1</td>
+                 <td>link1</td>
+                 <td>type1</td>
+                 <td>
+                   <a class="btn-floating waves-effect waves-light" href="#edit-modal" onclick="getRowData($(this).closest('td').parent()[0])"><i class="material-icons">mode_edit</i>
+                   </a>
+                   <a class="btn-floating waves-effect waves-light"
+                     onclick="javascript:alert('Delete row # : ' + $(this).closest('td').parent()[0].sectionRowIndex)">
+                     <i class="material-icons">delete</i>
+                   </a>
+                 </td>
+              </tr>
+            </tbody>
           </table>
+          </div>
          </div>
        </li>
       </ul>
@@ -222,6 +247,7 @@
       $('.collapsible').collapsible();
       $('.modal').modal();
       $('select').material_select();
+      // $('table').scrollTableBody();
       $('#movie-title.autocomplete').autocomplete({
          data: {
            "Norman: The Moderate Rise and Tragic Fall of a New York Fixer": null,

@@ -62,3 +62,13 @@ main .add-form {
 .modal {
     max-height: 85vh;
 }
+#search {
+   height: 40px;
+   margin-bottom: 0px;
+   margin-top: 0px;
+}
+.scrollable {
+  display: block;
+  max-height: 37vh!important;
+  overflow-y: auto;
+}

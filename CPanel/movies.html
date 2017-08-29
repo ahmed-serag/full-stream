@@ -180,7 +180,14 @@
        <li>
          <div class="collapsible-header active"><i class="material-icons">mode_edit</i>Edit Players</div>
          <div class="collapsible-body">
-          <table class="responsive-table highlight centered">
+           <div class="nav-wrapper card">
+               <div class="input-field">
+                 <input id="search" type="search" style="height: 40px;">
+                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+               </div>
+           </div>
+           <div class="scrollable">
+              <table class="responsive-table highlight centered">
             <thead>
                <tr>
                  <th>Movie Title</th>
@@ -221,6 +228,7 @@
               </tr>
              </tbody>
           </table>
+           </div>
          </div>
        </li>
       </ul>
@@ -239,8 +247,7 @@
     </div>
     <div class="modal-content">
       <h5>Edit Movie</h5>
-      <form class="col m10 offset-m1 s12" id="editForm"
-      action="javascript:alert('edit movie');location.reload();">
+      <form class="col m10 offset-m1 s12" id="editForm" action="javascript:alert('edit movie');location.reload();">
         <div class="row">
           <div class="input-field col m6 s12">
             <input id="movieTitle" type="text" disabled="true">
@@ -315,12 +322,14 @@
           <div class="range-field col m6 s12">
             <label for="movie-rate">Rate</label>
             <input type="range" id="movie-rate" min="0" max="5" value="0" step="0.5" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Range from 0 to 5 with a step = 0.5" />
-            <input type="checkbox" id="edit-fixed" />
-            <label for="edit-fixed">Fixed</label>
           </div>
         </div>
         <div class="row">
-         <div class="col m3 offset-m9 s10 offset-s1">
+          <div class="col m4 s12">
+            <input type="checkbox" id="edit-fixed" />
+            <label for="edit-fixed">Fixed</label>
+          </div>
+         <div class="col m3 offset-m5 s10 offset-s1">
            <button class="btn waves-effect waves-light modal-close" type="submit" name="action">Submit
              <i class="material-icons right">send</i>
            </button>
