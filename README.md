@@ -2,7 +2,7 @@
 ## required edits on Home page
 - ~~Reorganize Code~~
 - ~~adding login/register button~~
-- ~~adding login modal/~~ registration modal
+- ~~adding login modal/~~ registration modal : signup with fb, gmail, Or (name, mail, password)
 - adding a dropdown with links to (user's wishlist/messages/request movie) 20/08
 - edit profile button where user can change his picture or his name 20/08
 - when press on users' wish list, user should find a new page like top-movies page,
@@ -19,8 +19,6 @@
 
 ## required edits on series page
 - ~~Same as movie page + making each row of "Episodes" table clickable (it'd be great that on click on that row it calls a js function that makes an http req to get the episode data and represent it in the page but that's not required you don't have to build it, it's up to you)~~
-
-- send message for specific user
 
 ## CPANEL
 - ~~category (add/edit/delete)~~
@@ -81,7 +79,5 @@
  - series episode (add/edit/delete)
     - series
     - number
- - signup with fb, gmail, Or (name, mail, password)
  - add block list IPs
  - add place for banned words
- 
