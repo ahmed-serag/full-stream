@@ -3,12 +3,12 @@
 - ~~Reorganize Code~~
 - ~~adding login/register button~~
 - ~~adding login modal/~~ registration modal : signup with fb, gmail, Or (name, mail, password)
-- adding a dropdown with links to (user's wishlist/messages/request movie) 20/08
-- edit profile button where user can change his picture or his name 20/08
+- adding a dropdown with links to (user's wishlist/messages/request movie)
+- edit profile button where user can change his picture or his name
 - when press on users' wish list, user should find a new page like top-movies page,
-    actually it's ok to use the same design of top-movies page for this one 20/08
-- on messages user should see his messages, be able to send new message(not a chat)
+    actually it's ok to use the same design of top-movies page for this one
 - on request a movie used should fill a form with movie name
+- on messages user should see his messages, be able to send new message(not a chat)
 
 ## required edits on movie page
 - ~~Reorganize code~~
@@ -76,8 +76,8 @@
     - ~~status~~
     - ~~chain~~
     - ~~version~~
- - series episode (add/edit/delete)
-    - series
-    - number
- - add block list IPs
- - add place for banned words
+ - ~~series episode (add/edit/delete)~~
+    - ~~series~~
+    - ~~number~~
+ - ~~add block list IPs~~
+ - ~~add place for banned words~~

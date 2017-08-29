@@ -21,7 +21,7 @@
     <div class="row">
         <nav class="col l9 offset-l3 m12 s12 top-nav">
             <div class="nav-wrapper">
-              <a class="page-title">REPORTS</a>
+              <a class="page-title">BLOCKED IPs</a>
               <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
         </nav>
@@ -71,51 +71,46 @@
           </li>
         </ul>
       </li>
-      <li class="active">
+      <li>
         <a href="./reports.html" class="bold main-menu waves-effect waves-teal">Reported</a>
       </li>
-      <li>
+      <li class="active">
         <a href="./blocked-ips.html" class="bold main-menu waves-effect waves-teal">Blocked IPs</a>
       </li>
       <li>
         <a href="./banned-words.html" class="bold main-menu waves-effect waves-teal">Banned Words</a>
       </li>
-    </ul>
     </div>
+  </ul>
   </header>
   <main class="row">
     <div class="col l9 offset-l3 m12 s12">
       <ul class="collapsible popout" data-collapsible="accordion">
        <li>
-         <div class="collapsible-header active"><i class="material-icons">bug_report</i>Manage Bugs' Reports:</div>
+         <div class="collapsible-header active">
+            <i class="material-icons">block</i>Manage Blocked IPs:
+         </div>
          <div class="collapsible-body">
-           <div class="nav-wrapper card">
-               <div class="input-field">
-                 <input id="search" type="search" style="height: 40px;">
-                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-               </div>
-           </div>
-          <table class="responsive-table highlight centered">
+            <div class="row">
+              <a class="btn-floating btn-large waves-effect waves-light" href="#add-ip" style="float:right;"><i class="material-icons">add</i></a>
+            </div>
+            <div class="nav-wrapper card">
+              <div class="input-field">
+                <input id="search" type="search" style="height: 40px;">
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              </div>
+            </div>
+          <table class="responsive-table highlight">
             <thead>
                <tr>
-                 <th>Report ID</th>
-                 <th>Movie/Serie Title</th>
-                 <th>Player</th>
-                 <th>Link</th>
+                 <th>Blocked IPs</th>
                  <th></th>
                </tr>
             </thead>
             <tbody>
               <tr>
-                 <td>id1</td>
-                 <td>title1</td>
-                 <td>player1</td>
-                 <td>link1</td>
+                 <td>192.168.32.15</td>
                  <td>
-                   <a class="btn-floating waves-effect waves-light green"
-                     onclick="javascript:alert('Fix Bug row # : ' + $(this).closest('td').parent()[0].sectionRowIndex)">
-                     <i class="material-icons">done_all</i>
-                   </a>
                    <a class="btn-floating waves-effect waves-light red"
                      onclick="javascript:alert('Delete Bug row # : ' + $(this).closest('td').parent()[0].sectionRowIndex)">
                      <i class="material-icons">delete</i>
@@ -123,15 +118,8 @@
                  </td>
               </tr>
               <tr>
-                 <td>id2</td>
-                 <td>title2</td>
-                 <td>player2</td>
-                 <td>link2</td>
+                 <td>192.168.102.1</td>
                  <td>
-                   <a class="btn-floating waves-effect waves-light green"
-                     onclick="javascript:alert('Fix Bug row # : ' + $(this).closest('td').parent()[0].sectionRowIndex)">
-                     <i class="material-icons">done_all</i>
-                   </a>
                    <a class="btn-floating waves-effect waves-light red"
                      onclick="javascript:alert('Delete Bug row # : ' + $(this).closest('td').parent()[0].sectionRowIndex)">
                      <i class="material-icons">delete</i>
@@ -152,10 +140,35 @@
        </div>
    </div>
   </footer>
+  <div id="add-ip" class="modal">
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat btn-floating">
+        <i class="material-icons grey-text">close</i>
+      </a>
+    </div>
+    <div class="modal-content">
+      <h5>Add new blocked IP</h5>
+      <form class="col m10 offset-m1 s12" id="addForm"
+       action="javascript:alert('add IP');reset(document.getElementById('addForm'));">
+         <div class="row">
+           <div class="input-field col m10 offset-m1 s12">
+             <input id="blocked-ip" type="text" class="validate" required>
+             <label for="blocked-ip">Blocked IP</label>
+           </div>
+         </div>
+         <div class="row">
+            <button class="btn waves-effect waves-light modal-close" type="submit" name="action" style="float:right;">Submit
+              <i class="material-icons right">send</i>
+            </button>
+         </div>
+      </form>
+    </div>
+  </div>
   <script>
     $(document).ready(function(){
       $('.button-collapse').sideNav();
       $('.collapsible').collapsible();
+      $('.modal').modal();
      });
   </script>
 </body>
