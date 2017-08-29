@@ -184,7 +184,7 @@
          <div class="row">
            <div class="input-field col m10 offset-1 s12">
              <input id="serieTitle" type="text" disabled="true">
-             <label for="serie-title">Serie Title</label>
+             <!-- <label for="serie-title">Serie Title</label> -->
            </div>
            <div class="input-field col m10 offset-1 s12">
              <input id="episodeNumber" type="number" class="validate" required>
@@ -230,7 +230,7 @@
      });
      function getRowData(element)
      {
-        $(serieTitle).attr("placeholder", element.cells[1].innerHTML);
+        $(serieTitle).attr("placeholder", element.cells[0].innerHTML);
      }
      function reset(element) {
        element.reset();
