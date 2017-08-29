@@ -20,6 +20,8 @@
 ## required edits on series page
 - ~~Same as movie page + making each row of "Episodes" table clickable (it'd be great that on click on that row it calls a js function that makes an http req to get the episode data and represent it in the page but that's not required you don't have to build it, it's up to you)~~
 
+- send message for specific user
+
 ## CPANEL
 - ~~category (add/edit/delete)~~
     - ~~name~~
@@ -79,3 +81,7 @@
  - series episode (add/edit/delete)
     - series
     - number
+ - signup with fb, gmail, Or (name, mail, password)
+ - add block list IPs
+ - add place for banned words
+ 
