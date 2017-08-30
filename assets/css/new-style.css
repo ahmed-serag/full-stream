@@ -23,12 +23,11 @@
 .grey {
   color: #606060;
 }
-.modal-header {
+.signup-modal-header {
     padding: 0px !important;
     height:50px;
-    /*margin-bottom: 20px;*/
 }
-.modal-body{
+.signup-modal-body{
   padding-top: 0px !important;
 }
 .tab-content {
