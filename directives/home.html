@@ -66,7 +66,7 @@
                 </div>
               </form>
             </li>
-            <li id="signin">
+            <li>
               <a href="#" data-toggle="modal" data-target="#signInUp"><b>Sign In/ Sign Up</b></a>
             </li>
             <li id="profile" class="dropdown">
@@ -255,35 +255,95 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title">Sign In</h4>
+            <ul class="nav nav-tabs">
+              <li class="active col-md-6 signinup"><a href="#signin" data-toggle="tab">Sign In</a></li>
+              <li class="col-md-6 signinup"><a href="#signup" data-toggle="tab">Sign Up</a></li>
+            </ul>
           </div>
           <div class="modal-body">
-            <form class="col-md-10 col-md-offset-1" id="login" action="javascript:alert('login');reset(document.getElementById('login'));">
-              <div class="form-group">
-                <label for="email" class="col-md-2 control-label"><i class="material-icons">email</i></label>
-                <div class="col-md-10">
-                  <input type="email" class="form-control" id="email" placeholder="Email" required>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade active in" id="signin">
+                <div class="pagetitle">
+                  <h1>Sign In</h1>
                 </div>
+                <form class="col-md-10 col-md-offset-1" id="login" action="javascript:alert('login');reset(document.getElementById('login'));">
+                  <div class="form-group">
+                    <label for="email" class="col-md-2 control-label"><i class="material-icons">email</i></label>
+                    <div class="col-md-10">
+                      <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="col-md-2 control-label"><i class="material-icons">vpn_key</i></label>
+                    <div class="col-md-10">
+                      <input type="password" class="form-control" id="email" placeholder="Password" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-md-10 col-md-offset-2">
+                      <a class="teal" href=#>Forget Password?</a>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="form-group">
+                    <div class="col-md-10 col-md-offset-2">
+                      <button type="submit" class="btn btn-raised btn-block btn-warning">Login</button>
+                    </div>
+                  </div>
+                  <!-- <div class="form-group">
+                    <div class="col-md-10 col-md-offset-2">
+                      New to Full Stream?<a href="#signup" data-toggle="tab"> Create an account.</a>
+                    </div>
+                  </div> -->
+                </form>
               </div>
-              <div class="form-group">
-                <label for="password" class="col-md-2 control-label"><i class="material-icons">vpn_key</i></label>
-                <div class="col-md-10">
-                  <input type="password" class="form-control" id="email" placeholder="Password" required>
+              <div class="tab-pane fade" id="signup">
+                <div class="pagetitle">
+                  <h1>Sign Up</h1>
                 </div>
+                <form class="col-md-10 col-md-offset-1" id="signUP" action="javascript:alert('signup');reset(document.getElementById('signUP'));">
+                  <div class="form-group">
+                    <label for="username" class="col-md-2 control-label"><i class="material-icons">account_circle</i></label>
+                    <div class="col-md-10">
+                      <input type="text" class="form-control" id="username" placeholder="Username" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="col-md-2 control-label"><i class="material-icons">email</i></label>
+                    <div class="col-md-10">
+                      <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="col-md-2 control-label"><i class="material-icons">vpn_key</i></label>
+                    <div class="col-md-10">
+                      <input type="password" class="form-control" id="email" placeholder="Password" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-md-10 col-md-offset-2">
+                      <!-- that's a fake key please get the data-sitekey from the owner -->
+                      <div class="g-recaptcha" data-sitekey="6LeU_CMUAAAAAK5L_UpMPGS663dykf2collRZkdL&co=aHR0cDovL2Z1bGwtc3RyZWFtLnR2Ojgw&hl=en&v=r20170816175713&size=normal&cb=nr407mh6ofka">
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <br />
+                  <div class="form-group">
+                    <div class="col-md-10 col-md-offset-2">
+                      <p>
+                        By clicking on "Create an account" below, you are agreeing to the <a class="teal" href="#">Terms of Service</a> and the <a class="teal" href="#">Privacy Policy</a>.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-md-10 col-md-offset-2">
+                      <button type="submit" class="btn btn-raised btn-block btn-warning">Create an account</button>
+                    </div>
+                  </div>
+                </form>
               </div>
-              <div class="form-group">
-                <div class="col-md-10 col-md-offset-2">
-                  <a href=#>Forget Password?</a>
-                </div>
-              </div>
-              <br/>
-              <div class="form-group">
-                <div class="col-md-10 col-md-offset-2">
-                  <button type="submit" class="btn btn-raised btn-block btn-warning">Sign In</button>
-                </div>
-              </div>
-            </form>
+            </div>
           </div>
           <div class="modal-footer">
           </div>
@@ -366,5 +426,6 @@
     <script src = "../assets/js/star-rating.js"></script>
     <script src = "../assets/js/imglazyload.js"></script>
     <script src = "../assets/js/app.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
   </body>
 </html>

@@ -2,7 +2,7 @@
 ## required edits on Home page
 - ~~Reorganize Code~~
 - ~~adding login/register button~~
-- ~~adding login modal/~~ registration modal : signup with fb, gmail, Or (name, mail, password)
+- ~~adding login modal/registration modal : signup with fb, gmail, Or (name, mail, password)~~
 - ~~adding a dropdown with links to (user's wishlist/messages/request movie)~~
 - ~~when press on users' wish list, user should find a new page like top-movies page,
     actually it's ok to use the same design of top-movies page for this one~~

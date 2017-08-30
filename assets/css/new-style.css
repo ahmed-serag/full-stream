@@ -23,3 +23,22 @@
 .grey {
   color: #606060;
 }
+.modal-header {
+    padding: 0px !important;
+    height:50px;
+    /*margin-bottom: 20px;*/
+}
+.modal-body{
+  padding-top: 0px !important;
+}
+.tab-content {
+  padding-top: 0px !important;
+}
+.signinup {
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+}
+.teal {
+    color: #007177 !important;
+}
