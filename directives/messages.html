@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Sherine Sameh">
+  <meta name="description" content="Full Stream messages interface">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>full-stream Messages</title>
+  <link rel="stylesheet" href="../assets/css/dependencies/materialize.css" />
+  <!-- <link rel="stylesheet" href="../assets/css/dependencies/font.css" type="text/css"> -->
+  <link rel="stylesheet" href="../assets/css/chat-style.css" />
+  <link rel="icon" type="image/ico" href="../assets/img/icon.png">
+</head>
+<body ng-app="chatApp">
+  <div class="nav-wrapper navbar teal white-text " style="height:10vh;">
+    <a href="./home.html" class="brand-logo"><img src="../assets/img/templogo.png" class="responsive-img" alt="Logo"></a>
+  </div>
+  <div  ng-controller="chatCtrl" class="row main-container">
+  <div class="row no-padding no-margin app-header">
+    <div class="col m3 hide-on-small-only no-padding grey darken-1 white-text title" style="height:inherit; text-align:center;">
+      <span><i class="material-icons">supervisor_account</i>Contacts</span>
+    </div>
+    <div class="col m9 s12 no-padding white " ng-model="currentChat">
+      <img ng-src="{{currentChat.img}}" alt="Profile Picture" class="current-user circle responsive-img">
+      <span class="title grey-text" style="padding: 2vh 0; position:absolute; margin-left: 15px;">{{currentChat.name}}</span>
+      <a href="#" data-activates="slide-out" class="button-collapse show-on-small hide-on-med-and-up grey-text" style="float:right; padding: 2vh 0; margin-right: 15px;"><i class="material-icons">menu</i></a>
+    </div>
+  </div>
+  <div class="row no-padding app-body">
+    <div class="col m3 hide-on-small-only no-padding white chat-navbar">
+      <ul id="recent-chats" class="no-margin collection nav-container scroll">
+        <li ng-repeat="contact in contacts">
+          <a href="#" ng-click="openChat(contact.id)" class="row collection-item contact no-padding">
+            <div class="col s12">
+              <span class="time grey-text lighten-5">{{contact.messages[contact.messages.length -1].time}}</span>
+            </div>
+            <div class="col s3">
+              <div class="online-badge hide-on-med-and-down" data-badge=""></div>
+              <img ng-src="{{contact.img}}" alt="" class="circle responsive-img">
+            </div>
+            <div class="col s9">
+              <span class="title grey-text">{{contact.name}}</span><br />
+              <span class="last-msg grey-text">{{contact.messages[contact.messages.length -1].content}}</span><br />
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- message.type =0 -> received msg / message.type =1 -> sent message -->
+    <div class="col m9 s12 no-padding grey lighten-3 chat-box scroll">
+      <div ng-repeat="message in currentChat.messages">
+        <div ng-switch="{{message.type}}">
+          <div ng-switch-when="0">
+            <div class="row" style="margin-top:10px;">
+              <div class="col m12 s12">
+                <div class="talk-bubble tri-right round left-top" style="float: left;">
+                  <div class="talktext">
+                    <p>{{message.content}}</p>
+                  </div>
+                </div>
+                <span class="grey-text lighten-5" style="font-size:80%;">{{message.time}}</span>
+                <br />
+              </div>
+            </div>
+          </div>
+          <div ng-switch-when="1">
+            <div class="row" style="margin-top:10px;">
+              <div class="col m12 s12">
+                <div style="float: right; max-width:90%;">
+                  <span class="grey-text lighten-5" style="font-size:80%;">{{message.time}}</span>
+                  <div class="talk-bubble tri-left round right-top" style="white-space: normal !important;">
+                    <div style="word-wrap: break-word" class="talktext-right">
+                      <p style="word-wrap: break-word">{{message.content}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer col m9 offset-m3 s12">
+      <form name="form" ng-submit="send(formMessage); formMessage=''" role="form" class="row">
+        <div class="input-field col l10 m10 s9">
+          <textarea id="message" ng-model="formMessage" ng-required="true" placeholder="Type your message" class="materialize-textarea scroll">
+            </textarea>
+        </div>
+        <div class="input-field col l2 m2 hide-on-small-only">
+          <a ng-disabled="form.$invalid" ng-click="send(formMessage); formMessage=''" class="waves-effect waves-light btn">send</a>
+        </div>
+        <div class="input-field col s1 hide-on-med-and-up show-on-small">
+          <a ng-disabled="form.$invalid" ng-click="send(formMessage); formMessage=''" class="btn-floating waves-effect waves-light"><i class="material-icons">send</i></a>
+        </div>
+      </form>
+    </div>
+    <ul id="slide-out" class="side-nav">
+      <li class="teal white-text title">
+        <span><i class="material-icons">supervisor_account</i>Contacts</span>
+      </li>
+      <li ng-repeat="contact in contacts">
+        <a href="#" ng-click="openChat(contact.id)" class="row">
+              <img class="circle responsive-img" ng-src="{{contact.img}}" style="width:30px; height:30px;"/>
+              <span class="title grey-text">{{contact.name}}</span>
+          </a>
+      </li>
+    </ul>
+  </div>
+  <script type="text/javascript" src="../assets/js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/materialize.js"></script>
+  <script type="text/javascript" src="../assets/js/angular.js"></script>
+  <script type="text/javascript" src="../assets/js/nicescroll.js"></script>
+  <script type="text/javascript" src="../assets/js/chat.js"></script>
+  <script>
+    $(".button-collapse").sideNav();
+    $("#message").keypress(function(e) {
+      if (e.which == 13 && !e.shiftKey) {
+        $(this).closest("form").submit();
+        e.preventDefault();
+        return false;
+      }
+    });
+  </script>
+</body>
+</html>
