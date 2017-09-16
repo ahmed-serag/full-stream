@@ -8,7 +8,7 @@
     actually it's ok to use the same design of top-movies page for this one~~
 - ~~on request a movie used should fill a form with movie name~~
 - ~~edit profile button where user can change his picture or his name~~
-- on messages user should see his messages, be able to send new message(not a chat)
+- ~~on messages user should see his messages, be able to send new message(not a chat)~~
 
 ## required edits on movie page
 - ~~Reorganize code~~
